@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Custom Links -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- My Balance starts-->
+    <section class="my_bal">
+
+      <div class="my_bal-state">
+        <p>My balance</p>
+        <p>$921.48</p>
+      </div>
+
+      <img src="images/logo.svg" alt="logo" width="60px">
+    </section>
+    <!-- My Balance Ends -->
+
+    <!-- Charting States starts-->
+    <section class="chart">
+      <h1>Spending - Last 7 days</h1>
+
+      <div class="chart-days">
+        <div class="col">
+          <div class="value">$15</div>
+          <div class="graph"></div>
+          <p>mon</p>
+        </div>
+        <div class="col">
+          <div class="value">$15</div>
+          <div class="graph"></div>
+          <p>tue</p>
+        </div>
+        <div class="col">
+          <div class="value">$20</div>
+          <div class="graph"></div>
+          <p>wed</p>
+        </div>
+        <div class="col">
+          <div class="value">$10</div>
+          <div class="graph"></div>
+          <p>thu</p>
+        </div>
+        <div class="col">
+          <div class="value">$15</div>
+          <div class="graph"></div>
+          <p>fri</p>
+        </div>
+        <div class="col">
+          <div class="value">$15</div>
+          <div class="graph"></div>
+          <p>sat</p>
+        </div>
+        <div class="col">
+          <div class="value">$15</div>
+          <div class="graph"></div>
+          <p>sun</p>
+        </div>
+      </div>
+
+      <!-- Total Comparision -->
+      <div class="total">
+
+        <div class="total-this_month">
+          <p>Total this month</p>
+          <p id="total">$478.33</p>
+        </div>
+
+        <div class="total-previous_month">
+          <p>+2.4%</p>
+          <p>from last month</p>
+        </div>
+      </div>
+    </section>
+    <!-- Charting States Ends-->
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Mohan823" target="_blank">Mohan Krishna</a>.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

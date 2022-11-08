@@ -1,0 +1,149 @@
+@import 'partials/partials',
+url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$ff-primary: 'DM Sans', sans-serif;
+
+// ### Primary
+
+$clr-soft-red: hsl(10, 79%, 65%);
+$clr-cyan: hsl(186, 34%, 60%);
+
+$clr-dark-brown: hsl(25, 47%, 15%);
+$clr-medium-brown: hsl(28, 10%, 53%);
+$clr-cream: hsl(27, 66%, 92%); //Used Bg
+$clr-very-pale-orange: hsl(33, 100%, 98%);
+
+body {
+    font-family: $ff-primary;
+    font-size: 1.125rem;
+    background-color: $clr-cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container {
+    overflow: hidden;
+    padding: 1rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    min-width: 25rem;
+
+    @media (max-width: 36em) {
+        min-width: 23rem;
+    }
+}
+
+.my_bal {
+    background-color: $clr-soft-red;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: $clr-very-pale-orange;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    p:last-child {
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+}
+
+.chart {
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.chart-days {
+    height: 12rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 7);
+    align-items: end;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .value {
+        text-align: center;
+        display: none;
+        margin-right: auto;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.4rem;
+        border-radius: 0.2rem;
+        margin: auto;
+        background-color: $clr-dark-brown;
+        color: white;
+    }
+
+    .graph {
+        width: 75%;
+        background-color: $clr-soft-red;
+        border-radius: 0.3rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: hsl(10, 100%, 76%);
+        }
+    }
+
+    .high {
+        &:hover {
+            background-color: $clr-cyan;
+        }
+    }
+
+    p {
+        font-size: 0.6725rem;
+        color: #999;
+    }
+}
+
+.total {
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 1.5rem;
+    color: $clr-dark-brown;
+    font-size: 1rem;
+
+    .total-this_month {
+        font-size: 2rem;
+        font-weight: 700;
+
+        p:first-child {
+            color: #999;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+    }
+
+    .total-previous_month {
+        text-align: end;
+        padding-bottom: 0.5rem;
+
+        p:first-child {
+            font-weight: 700;
+        }
+
+        p:last-child {
+            color: #999;
+            font-size: 0.8rem;
+        }
+    }
+}
